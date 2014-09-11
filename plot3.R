@@ -1,4 +1,8 @@
 consu_data=read.csv("sorted_data.csv")
+
+#Changing time to English
+Sys.setlocale("LC_TIME", "English")
+
 consu_data$Timeline<-NA
 consu_data$Timeline <- strptime(paste(consu_data$Date, consu_data$Time), format = "%d/%m/%Y %H:%M:%S")
 png(filename='plot3.png')

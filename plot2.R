@@ -1,4 +1,7 @@
 consu_data=read.csv("sorted_data.csv")
+#Setting date and time to English 
+Sys.setlocale("LC_TIME", "English")
+
 #For this plot we need to generate timeline from the Date + Time attributes, we can then use it as normal time
 consu_data$Timeline<-NA
 consu_data$Timeline <- strptime(paste(consu_data$Date, consu_data$Time), format = "%d/%m/%Y %H:%M:%S")

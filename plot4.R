@@ -16,7 +16,7 @@ plot(consu_data$Timeline,consu_data$Global_active_power,ylab='Global Active Powe
 plot(consu_data$Timeline,consu_data$Voltage,ylab='Voltage',xlab="datetime",type='l')
 
 # Plot 3
-plot(consu_data$Timeline,consu_data$Sub_metering_1,type='l',ylab="Sub metering")
+plot(consu_data$Timeline,consu_data$Sub_metering_1,type='l',xlab="datetime",ylab="Energy sub metering")
 lines(consu_data$Timeline,consu_data$Sub_metering_2,col='red')
 lines(consu_data$Timeline,consu_data$Sub_metering_3,col="blue")
 legend("topright",pch='-',col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
